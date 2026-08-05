@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ return (
+  <div className="App">
+
+    {/* Navigation */}
+    <header>
+      <h1>Senior Success Planner</h1>
+
+      <nav>
+        <a href="#">My Tasks</a>
+        
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    {/* Main Content */}
+    <main>
+      <h2>Senior Year Checklist</h2>
+
+      <p>
+        Stay organized and keep track of your college and graduation tasks.
+      </p>
+    </main>
+
+  </div>
   );
 }
 
