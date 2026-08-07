@@ -25,6 +25,29 @@ function App() {
     setNewTask('');
   }
 
+  function toggleTask(id) {
+    setTasks(
+      tasks.map(function(task) {
+        if (task.id === id) {
+          return {
+            ...task,
+            completed: !task.completed
+          };
+        }
+
+        return task;
+      })
+    );
+  }
+
+  function deleteTask(id) {
+  setTasks(
+    tasks.filter(function(task) {
+      return task.id !== id;
+    })
+  );
+}
+
   return (
     <div className="App">
 
@@ -60,16 +83,25 @@ function App() {
           </button>
         </form>
 
-{/* Task List */}
-<div>
-  {tasks.map(function(task) {
-    return (
-      <div key={task.id}>
-        <p>{task.text}</p>
-      </div>
-    );
-  })}
-</div>
+        {/* Task List */}
+        <div>
+          {tasks.map(function(task) {
+            return (
+              <div key={task.id}>
+                <input
+                  type="checkbox"
+                  checked={task.completed}
+                  onChange={() => toggleTask(task.id)}
+                />
+
+                <p>{task.text}</p>
+                <button onClick={() => deleteTask(task.id)}>
+                  Delete
+</button>
+              </div>
+            );
+          })}
+        </div>
 
       </main>
 
