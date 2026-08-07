@@ -4,6 +4,7 @@ import './App.css';
 function App() {
 
   const [newTask, setNewTask] = useState('');
+  const [filter, setFilter] = useState('all');
   const [tasks, setTasks] = useState([]);
 
   function addTask(event) {
@@ -47,6 +48,17 @@ function App() {
     })
   );
 }
+const filteredTasks = tasks.filter(function(task) {
+  if (filter === 'completed') {
+    return task.completed;
+  }
+
+  if (filter === 'incomplete') {
+    return !task.completed;
+  }
+
+  return true;
+});
 
   return (
     <div className="App">
@@ -82,10 +94,24 @@ function App() {
             Add Task
           </button>
         </form>
+        {/* Task Filters */}
+<div>
+  <button onClick={() => setFilter('all')}>
+    All
+  </button>
+
+  <button onClick={() => setFilter('completed')}>
+    Completed
+  </button>
+
+  <button onClick={() => setFilter('incomplete')}>
+    Incomplete
+  </button>
+</div>
 
         {/* Task List */}
         <div>
-          {tasks.map(function(task) {
+          {filteredTasks.map(function(task) {
             return (
               <div key={task.id}>
                 <input
