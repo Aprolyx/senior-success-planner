@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Senior Success Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Author
 
-## Available Scripts
+April Sanchez
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+Senior Success Planner is a task management web application designed to help high school seniors stay organized while preparing for graduation and college.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Students often have multiple deadlines and responsibilities during their senior year, including completing financial aid applications, applying for scholarships, submitting college applications, and completing graduation requirements. This application provides students with a simple way to create and manage their own senior-year checklist.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project was created as Project 3 for the Software Engineering Bootcamp and was built using React.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Senior Success Planner allows users to:
 
-### `npm run build`
+- Add new tasks to their senior-year checklist
+- View all current tasks
+- Mark tasks as completed or incomplete
+- Visually identify completed tasks with a strike-through effect
+- Delete tasks
+- Filter tasks by All, Completed, or Incomplete
+- Navigate between the My Tasks and Contact pages
+- Submit information through a controlled Contact form
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Use the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### My Tasks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigate to the My Tasks page to manage your checklist.
 
-### `npm run eject`
+1. Type a task into the "Add a new task" field.
+2. Click the "Add Task" button.
+3. Use the checkbox next to a task to mark it as completed.
+4. Use the Delete button to remove a task.
+5. Use the All, Completed, and Incomplete buttons to filter the task list.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the Contact page using the navigation bar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The contact form includes:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- First Name
+- Last Name
+- Email
+- Comments
 
-## Learn More
+Complete the fields and click Submit to submit the form.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- HTML
+- CSS
+- JavaScript
+- React
+- React Router
+- Create React App
+- Git
+- GitHub
 
-### Code Splitting
+## Installation Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To run the project locally:
 
-### Analyzing the Bundle Size
+1. Clone the GitHub repository.
+2. Open the project folder in Visual Studio Code.
+3. Open a terminal in the project directory.
+4. Install the project dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   npm install
 
-### Making a Progressive Web App
+5. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   npm start
 
-### Advanced Configuration
+6. Open the application in your browser at localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Future Improvements
 
-### Deployment
+Future versions of Senior Success Planner could include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Due dates and reminders for important college and graduation deadlines.
+2. Task categories for financial aid, college applications, scholarships, and graduation requirements.
+3. Saving tasks so they remain available after the user closes or refreshes the browser.
+4. A progress tracker showing how many senior-year tasks have been completed.
+5. Additional college-planning resources for students.
 
-### `npm run build` fails to minify
+## Project Purpose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The goal of Senior Success Planner is to create a simple and accessible organizational tool that helps students keep track of important senior-year responsibilities while demonstrating React state management, components, routing, forms, and CRUD-style functionality.
