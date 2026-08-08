@@ -4,8 +4,8 @@ function Header() {
       <h1>Senior Success Planner</h1>
 
       <nav>
-        <a href="#">My Tasks</a>
-        <a href="#">Contact</a>
+        <a href="/todos">My Tasks</a>
+        <a href="/contact">Contact</a>  
       </nav>
     </header>
   );

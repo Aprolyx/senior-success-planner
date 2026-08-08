@@ -3,6 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
+import Contact from './components/Contact';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -63,55 +65,62 @@ const filteredTasks = tasks.filter(function(task) {
   return true;
 });
 
-  return (
+return (
+  <BrowserRouter>
     <div className="App">
 
-      {/* Navigation */}
-<Header />
+      <Header />
 
-      {/* Main Content */}
-      <main>
-        <h2>Senior Year Checklist</h2>
+      <Routes>
 
-        <p>
-          Stay organized and keep track of your college and graduation tasks.
-        </p>
+        <Route
+          path="/todos"
+          element={
+            <main>
+              <h2>Senior Year Checklist</h2>
 
-{/* Add Task Form */}
-<TaskForm
-  newTask={newTask}
-  setNewTask={setNewTask}
-  addTask={addTask}
-/>
+              <p>
+                Stay organized and keep track of your college and graduation tasks.
+              </p>
 
-       
-        {/* Task Filters */}
-<div>
-  <button onClick={() => setFilter('all')}>
-    All
-  </button>
+              <TaskForm
+                newTask={newTask}
+                setNewTask={setNewTask}
+                addTask={addTask}
+              />
 
-  <button onClick={() => setFilter('completed')}>
-    Completed
-  </button>
+              <div>
+                <button onClick={() => setFilter('all')}>
+                  All
+                </button>
 
-  <button onClick={() => setFilter('incomplete')}>
-    Incomplete
-  </button>
-</div>
+                <button onClick={() => setFilter('completed')}>
+                  Completed
+                </button>
 
-        {/* Task List */}
-<TaskList
-  filteredTasks={filteredTasks}
-  toggleTask={toggleTask}
-  deleteTask={deleteTask}
-/>
+                <button onClick={() => setFilter('incomplete')}>
+                  Incomplete
+                </button>
+              </div>
 
+              <TaskList
+                filteredTasks={filteredTasks}
+                toggleTask={toggleTask}
+                deleteTask={deleteTask}
+              />
+            </main>
+          }
+        />
 
-      </main>
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+      </Routes>
 
     </div>
-  );
+  </BrowserRouter>
+);
 }
-
 export default App;
