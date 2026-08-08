@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 
 function App() {
 
@@ -64,14 +67,7 @@ const filteredTasks = tasks.filter(function(task) {
     <div className="App">
 
       {/* Navigation */}
-      <header>
-        <h1>Senior Success Planner</h1>
-
-        <nav>
-          <a href="#">My Tasks</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
+<Header />
 
       {/* Main Content */}
       <main>
@@ -81,19 +77,14 @@ const filteredTasks = tasks.filter(function(task) {
           Stay organized and keep track of your college and graduation tasks.
         </p>
 
-        {/* Add Task Form */}
-        <form onSubmit={addTask}>
-          <input
-            type="text"
-            placeholder="Add a new task..."
-            value={newTask}
-            onChange={(event) => setNewTask(event.target.value)}
-          />
+{/* Add Task Form */}
+<TaskForm
+  newTask={newTask}
+  setNewTask={setNewTask}
+  addTask={addTask}
+/>
 
-          <button type="submit">
-            Add Task
-          </button>
-        </form>
+       
         {/* Task Filters */}
 <div>
   <button onClick={() => setFilter('all')}>
@@ -110,24 +101,12 @@ const filteredTasks = tasks.filter(function(task) {
 </div>
 
         {/* Task List */}
-        <div>
-          {filteredTasks.map(function(task) {
-            return (
-              <div key={task.id}>
-                <input
-                  type="checkbox"
-                  checked={task.completed}
-                  onChange={() => toggleTask(task.id)}
-                />
+<TaskList
+  filteredTasks={filteredTasks}
+  toggleTask={toggleTask}
+  deleteTask={deleteTask}
+/>
 
-                <p>{task.text}</p>
-                <button onClick={() => deleteTask(task.id)}>
-                  Delete
-</button>
-              </div>
-            );
-          })}
-        </div>
 
       </main>
 
