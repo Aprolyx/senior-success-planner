@@ -3,14 +3,16 @@ function TaskList({ filteredTasks, toggleTask, deleteTask }) {
     <div>
       {filteredTasks.map(function(task) {
         return (
-          <div key={task.id}>
+          <div key={task.id} className="task-item">
             <input
               type="checkbox"
               checked={task.completed}
               onChange={() => toggleTask(task.id)}
             />
 
-            <p>{task.text}</p>
+            <p className={task.completed ? 'completed' : ''}>
+  {task.text}
+</p>
 
             <button onClick={() => deleteTask(task.id)}>
               Delete
