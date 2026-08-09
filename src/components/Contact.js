@@ -25,6 +25,11 @@ function Contact() {
   return (
     <main>
       <h2>Contact an Advisor</h2>
+      <p>
+  Need help with your senior year? Send a message if you have questions
+  about college applications, financial aid, scholarships, or graduation planning.
+</p>
+
 
      <form onSubmit={handleSubmit}>
 

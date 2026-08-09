@@ -92,27 +92,6 @@ button:hover {
   background-color: #004f7c;
 }
 
-/* Mobile layout */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  main {
-    margin: 20px;
-    padding: 10px;
-  }
-
-  input {
-    width: 90%;
-  }
-
-  button {
-    width: 90%;
-  }
-}
-
 /* Individual task row */
 .task-item {
   display: flex;
@@ -137,8 +116,73 @@ button:hover {
   text-align: left;
   margin: 0;
 }
+
 /* Task progress */
 .task-progress {
   font-weight: bold;
   margin: 20px 0;
+}
+
+/* Senior Year Tips */
+.senior-tips {
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* Tips heading */
+.senior-tips h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Tips container */
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual tip card */
+.tip-card {
+  flex: 1 1 45%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Tip card title */
+.tip-card h4 {
+  margin-top: 0;
+  color: #182b49;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .tips-container {
+    flex-direction: column;
+  }
+
+  .tip-card {
+    flex: 1 1 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+  }
 }

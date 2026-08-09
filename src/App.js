@@ -118,6 +118,47 @@ return (
                 toggleTask={toggleTask}
                 deleteTask={deleteTask}
               />
+              {/* Senior Year Tips */}
+<section className="senior-tips">
+  <h3>Senior Year Tips</h3>
+
+  <p>
+    Stay ahead of important deadlines throughout your senior year.
+  </p>
+
+  <div className="tips-container">
+
+    <div className="tip-card">
+      <h4>College Applications</h4>
+      <p>
+        Keep track of application requirements and important deadlines.
+      </p>
+    </div>
+
+    <div className="tip-card">
+      <h4>Financial Aid</h4>
+      <p>
+        Complete your FAFSA or CADAA and check for any additional requirements.
+      </p>
+    </div>
+
+    <div className="tip-card">
+      <h4>Scholarships</h4>
+      <p>
+        Search and apply for scholarships throughout your senior year.
+      </p>
+    </div>
+
+    <div className="tip-card">
+      <h4>Graduation</h4>
+      <p>
+        Check in with your counselor to make sure you are on track to graduate.
+      </p>
+    </div>
+
+  </div>
+</section>
+
             </main>
           }
         />
