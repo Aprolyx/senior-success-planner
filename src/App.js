@@ -82,6 +82,12 @@ return (
               <p>
                 Stay organized and keep track of your college and graduation tasks.
               </p>
+              <p className="task-progress">
+  {tasks.filter(function(task) {
+    return task.completed;
+  }).length} of {tasks.length} tasks completed
+</p>
+
 
               <TaskForm
                 newTask={newTask}

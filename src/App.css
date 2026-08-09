@@ -137,3 +137,8 @@ button:hover {
   text-align: left;
   margin: 0;
 }
+/* Task progress */
+.task-progress {
+  font-weight: bold;
+  margin: 20px 0;
+}
