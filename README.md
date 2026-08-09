@@ -4,6 +4,9 @@
 
 April Sanchez
 
+## Live Application
+
+GitHub Pages: [Senior Success Planner]https://aprolyx.github.io/senior-success-planner/
 ## Project Overview
 
 Senior Success Planner is a task management web application designed to help high school seniors stay organized while preparing for graduation and college.
@@ -22,8 +25,11 @@ The Senior Success Planner allows users to:
 - Visually identify completed tasks with a strike-through effect
 - Delete tasks
 - Filter tasks by All, Completed, or Incomplete
+- View progress based on the number of completed tasks
+- View senior-year tips for college applications, financial aid, scholarships, and graduation
 - Navigate between the My Tasks and Contact pages
 - Submit information through a controlled Contact form
+
 
 ## How to Use the Application
 
@@ -85,8 +91,8 @@ Future versions of Senior Success Planner could include:
 1. Due dates and reminders for important college and graduation deadlines.
 2. Task categories for financial aid, college applications, scholarships, and graduation requirements.
 3. Saving tasks so they remain available after the user closes or refreshes the browser.
-4. A progress tracker showing how many senior-year tasks have been completed.
-5. Additional college-planning resources for students.
+4. A calendar view for organizing important senior-year deadlines.
+5. Additional college-planning resources and links for students.
 
 ## Project Purpose
 
