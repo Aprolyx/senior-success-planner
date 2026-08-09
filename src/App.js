@@ -4,7 +4,7 @@ import Header from './components/Header';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import Contact from './components/Contact';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
 
@@ -66,12 +66,16 @@ const filteredTasks = tasks.filter(function(task) {
 });
 
 return (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div className="App">
 
       <Header />
 
       <Routes>
+        <Route
+  path="/"
+  element={<Navigate to="/todos" replace />}
+/>
 
         <Route
           path="/todos"
